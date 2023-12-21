@@ -5,9 +5,8 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Create from './create';
+import CreateComplaint from './CreateComplaint';
 import Read from './read';
-import Edit from './edit';
 import Image from 'react-bootstrap/Image'
 import logo from './logo.png';
 import { BsFillHouseDoorFill } from "react-icons/bs";
@@ -41,22 +40,20 @@ function Header() {
                     <Nav.Link href="/"><BsFillHouseDoorFill />  Homepage | what we do</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link href="/create"><BsExclamationLg />  Report pothole / broken streetlight</Nav.Link>
+                    <Nav.Link href="/createComplaint"><BsExclamationLg />  Report pothole / broken streetlight</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link href="/read"><BsFillPersonFill />  Live reports</Nav.Link>
+                    <Nav.Link href="/readComplaint"><BsFillPersonFill />  Live reports</Nav.Link>
                 </Nav.Item>
              </Nav>
                      <Routes>
                      <Route path='/' element={<Content></Content>}></Route>
-                     <Route path='/read' element={<Read></Read>}></Route>
-                     <Route path='/create' element={<Create></Create>}></Route>
-                     <Route path='/edit/:id' element={<Edit></Edit>}></Route>
+                     <Route path='/readComplaint' element={<Read></Read>}></Route>
+                     <Route path='/createComplaint' element={<CreateComplaint></CreateComplaint>}></Route>
                      <Route path='/EditComplaint/:id' element={<EditComplaint></EditComplaint>}></Route>
                  </Routes>
         </BrowserRouter>
 
     );
 }
-
 export default Header;

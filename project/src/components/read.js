@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Books from "./books";
+import Complaints from "./Complaints";
 import { MDBRow, MDBCol } from 'mdb-react-ui-kit';
 import Popup from 'reactjs-popup';
 
@@ -45,7 +45,7 @@ function Read() {
         <div>
             <h2>These are live issues & complaints from residents!</h2>
             <MDBRow className='w-100'>
-            <Books myBooks={data} ReloadData={Reload}></Books>
+            <Complaints myBooks={data} ReloadData={Reload}></Complaints>
             </MDBRow>
         </div>
     );

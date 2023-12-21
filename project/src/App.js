@@ -7,9 +7,8 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import Create from './components/create';
+import Create from './components/CreateComplaint';
 import Read from './components/read';
-import Edit from './components/edit';
 import EditComplaint from './components/EditComplaint';
 
 function App() {

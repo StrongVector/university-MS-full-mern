@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 
 // function for creating more complaints
-function Create() {
+function CreateComplaint() {
 
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
@@ -92,4 +92,4 @@ function Create() {
     );
 
 }
-export default Create;
+export default CreateComplaint;

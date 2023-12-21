@@ -73,7 +73,7 @@ export function Complaints(props) {
                                     <td><b>Delete Complaint</b></td>
                                     <td><Button onClick={(e) => {
                                         e.preventDefault();
-                                        axios.delete('http://localhost:4000/api/complaint/' + complaint._id)
+                                        axios.delete('http://localhost:4000/api/book/' + complaint._id)
                                             .then(() => {
                                                 window.location.reload();
                                                 console.log('need to reload now')
