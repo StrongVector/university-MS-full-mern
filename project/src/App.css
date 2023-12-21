@@ -55,3 +55,10 @@ row{
 .nav-link a{
   color:white!important;
 }
+
+.form-control{
+  border-radius: 50px!important;
+  border: 1px solid black!important;
+  width: 50%!important;
+  margin:5px!important;
+}

@@ -1,48 +1,6 @@
-// import Button from 'react-bootstrap/Button';
-// import Card from 'react-bootstrap/Card';
 
-// function Content() {
-//     return (
-//         <div>
-//             {/* Ttitle */}
-//             {/* <h1>Hello World!</h1> */}
-//             {/* get's  current date and time */}
-//             {/* <h2>It is {new Date().toLocaleTimeString()}.</h2> */}
-//             <div id="map-container-google-1" class="z-depth-1-half map-container" >
-//                 <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
-//             </div>
-
-
-//         </div>
-
-//     );
-// }
-// export default Content;
-
-// import Button from 'react-bootstrap/Button';
-// import Card from 'react-bootstrap/Card';
-
-// function Content() {
-//   return (
-//     <Card style={{ width: '18rem' }}>
-//       <Card.Img variant="top" src="holder.js/100px180" />
-//       <Card.Body>
-//         <Card.Title>Card Title</Card.Title>
-//         <Card.Text>
-//           Some quick example text to build on the card title and make up the
-//           bulk of the card's content.
-//         </Card.Text>
-//         <Button variant="primary">Go somewhere</Button>
-//       </Card.Body>
-//     </Card>
-//   );
-// }
-
-// export default Content;
 
 import React from 'react';
-// import { MDBRow, MDBCol } from 'mdb-react-ui-kit';
-
 import potHoles from './potholes.PNG';
 import streetLights from './street-light.PNG';
 import Container from 'react-bootstrap/Container';

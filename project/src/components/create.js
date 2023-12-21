@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 
-// function for creating more books
+// function for creating more complaints
 function Create() {
 
     const [title, setTitle] = useState('');

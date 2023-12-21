@@ -10,6 +10,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Create from './components/create';
 import Read from './components/read';
 import Edit from './components/edit';
+import EditComplaint from './components/EditComplaint';
 
 function App() {
   return (

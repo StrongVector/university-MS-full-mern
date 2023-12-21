@@ -13,6 +13,7 @@ import logo from './logo.png';
 import { BsFillHouseDoorFill } from "react-icons/bs";
 import { BsExclamationLg } from "react-icons/bs";
 import { BsFillPersonFill } from "react-icons/bs";
+import EditComplaint from './EditComplaint';
 
 // This is the funciton to print the header
 function Header() {
@@ -51,6 +52,7 @@ function Header() {
                      <Route path='/read' element={<Read></Read>}></Route>
                      <Route path='/create' element={<Create></Create>}></Route>
                      <Route path='/edit/:id' element={<Edit></Edit>}></Route>
+                     <Route path='/EditComplaint/:id' element={<EditComplaint></EditComplaint>}></Route>
                  </Routes>
         </BrowserRouter>
 
