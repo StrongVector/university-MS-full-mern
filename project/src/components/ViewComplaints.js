@@ -6,7 +6,7 @@ import { MDBRow, MDBCol } from 'mdb-react-ui-kit';
 import Popup from 'reactjs-popup';
 
 // This is the function to view book items
-function Read() {
+function ViewComplaints() {
     const [data, setData] = useState([]);
     useEffect(
         () => {
@@ -48,4 +48,4 @@ function Read() {
     );
 
 }
-export default Read;
+export default ViewComplaints;
