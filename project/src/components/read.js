@@ -12,7 +12,7 @@ function Read() {
     useEffect(
         () => {
 
-            axios.get('http://localhost:4000/api/books')
+            axios.get('http://localhost:4000/api/complaints')
                 .then(
                     (response) => {
                         setData(response.data)

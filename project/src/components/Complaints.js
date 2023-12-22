@@ -1,8 +1,6 @@
 import React from 'react';
 import { MDBRow, MDBCol } from 'mdb-react-ui-kit';
 import Button from 'react-bootstrap/Button';
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
 import axios from 'axios';
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -19,8 +17,6 @@ export function Complaints(props) {
                     <div>
                         <table>
                             <tbody>
-
-
                                 <tr>
                                     <td><b>Id :</b></td>
                                     <td><i>{complaint._id}</i></td>
@@ -73,7 +69,7 @@ export function Complaints(props) {
                                     <td><b>Delete Complaint</b></td>
                                     <td><Button onClick={(e) => {
                                         e.preventDefault();
-                                        axios.delete('http://localhost:4000/api/book/' + complaint._id)
+                                        axios.delete('http://localhost:4000/api/complaint/' + complaint._id)
                                             .then(() => {
                                                 window.location.reload();
                                                 console.log('need to reload now')

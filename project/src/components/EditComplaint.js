@@ -50,7 +50,7 @@ function EditComplaint() {
         axios.put('http://localhost:4000/EditComplaint/' + id, trainerDetails)
             .then((response) => {
                 console.log(response.data);
-                navigate('/read');
+                navigate('/readComplaint');
             });
     }
 

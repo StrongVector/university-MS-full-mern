@@ -25,7 +25,7 @@ function CreateComplaint() {
             lon: lon
         };
 
-        axios.post('http://localhost:4000/api/book', book)
+        axios.post('http://localhost:4000/api/complaint', book)
             .then(
                 alert('Your complaint has been uploaded! Thank you')
             )

@@ -36,27 +36,27 @@ const bookSchema = new mongoose.Schema({
   lon: String
 })
 
-const bookModel = mongoose.model('db', bookSchema);
+const complaintModel = mongoose.model('db', bookSchema);
 
-app.delete('/api/book/:id', async (req, res) => {
+app.delete('/api/complaint/:id', async (req, res) => {
   console.log("Delete: " + req.params.id);
 
-  let book = await bookModel.findByIdAndDelete(req.params.id) //find id and delete
+  let book = await complaintModel.findByIdAndDelete(req.params.id) //find id and delete
   res.send(book);
 
 })
 
-app.put('/api/book/:id', async (req, res) => {
+app.put('/api/complaint/:id', async (req, res) => {
   console.log("Update: " + req.params.id);
 
-  let book = await bookModel.findByIdAndUpdate(req.params.id, req.body, { new: true });
+  let book = await complaintModel.findByIdAndUpdate(req.params.id, req.body, { new: true });
   res.send(book);
 })
 
-app.post('/api/book', (req, res) => {
+app.post('/api/complaint', (req, res) => {
   console.log(req.body);
 
-  bookModel.create({
+  complaintModel.create({
     title: req.body.title,
     description: req.body.description,
     status: 'just uploaded to databse',
@@ -73,22 +73,22 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.get('/api/books', async (req, res) => {
+app.get('/api/complaints', async (req, res) => {
 
-  let books = await bookModel.find({});
+  let books = await complaintModel.find({});
   res.json(books);
 })
 
-app.get('/api/book/:identifier', async (req, res) => {
+app.get('/api/complaint/:identifier', async (req, res) => {
   console.log(req.params.identifier);
 
-  let book = await bookModel.findById(req.params.identifier);
+  let book = await complaintModel.findById(req.params.identifier);
   res.send(book);
 })
 
 //find a specific Complaint by id
 app.get('/complaint/:id', async(req, res) => {
-    let Complaint = await bookModel.findById(req.params.id);
+    let Complaint = await complaintModel.findById(req.params.id);
     console.log(req)
     res.send(Complaint);
 });
@@ -97,7 +97,7 @@ app.get('/complaint/:id', async(req, res) => {
 app.put('/EditComplaint/:id', async(req, res) => {
   console.log("update:" + req.params.id);
  
-  let trainer = await bookModel.findByIdAndUpdate(req.params.id, req.body, {new: true});
+  let trainer = await complaintModel.findByIdAndUpdate(req.params.id, req.body, {new: true});
   res.send(trainer);//resend to book.js to change the mapping
 })
 
