@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 //function for complaints - page (Live reports)
 export function Complaints(props) {
-    return props.myBooks.map(
+    return props.myComplaints.map(
         (complaint) => {
             return (
                 <MDBCol className='{book._id}'>

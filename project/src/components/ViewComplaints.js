@@ -24,25 +24,12 @@ function ViewComplaints() {
         }, []
     );
 
-    const Reload = (e) => {
-        axios.get('http://localhost:4000/api/books')
-            .then(
-                (response) => {
-                    setData(response.data)
-                }
-            )
-            .catch(
-                (error) => {
-                    console.log(error);
-                }
-            )
-    }
 
     return (
         <div>
             <h2>These are live issues & complaints from residents!</h2>
             <MDBRow className='w-100'>
-                <Complaints myBooks={data} ReloadData={Reload}></Complaints>
+                <Complaints myComplaints={data} ></Complaints>
             </MDBRow>
         </div>
     );
