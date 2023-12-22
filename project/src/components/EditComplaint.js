@@ -46,7 +46,7 @@ function EditComplaint() {
 
         axios.put('http://localhost:4000/EditComplaint/' + id, ComplaintDetails)
             .then((response) => {
-                navigate('/readComplaint');
+                navigate('/ViewComplaints');
             });
     }
 
