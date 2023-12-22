@@ -1,3 +1,4 @@
+// Import libraries
 import React from 'react';
 import { MDBRow, MDBCol } from 'mdb-react-ui-kit';
 import Button from 'react-bootstrap/Button';
@@ -5,16 +6,16 @@ import axios from 'axios';
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+//function for complaints - page (Live reports)
 export function Complaints(props) {
-    const options = ["Seen", "Working on this task", "Finished this task"];
-    const [trainerArray, setTrainerArray] = useState([]);
-
     return props.myBooks.map(
         (complaint) => {
             return (
                 <MDBCol className='{book._id}'>
+                    {/* This is an iframe - I've concatinated the url from openstreetmap.org to present the lat and lon on a marker on the map */}
                     <iframe width="425" height="350" src={"http://www.openstreetmap.org/export/embed.html?bbox=" + complaint.lon + "%2C" + complaint.lat + "%2C" + complaint.lon + "%2C" + complaint.lat + "&marker=" + complaint.lat + "%2C" + complaint.lon + "&layers=ND"}></iframe>
                     <div>
+                        {/* Table with label and information in it */}
                         <table>
                             <tbody>
                                 <tr>
@@ -87,8 +88,7 @@ export function Complaints(props) {
 
                     </div>
                 </MDBCol>
-
-            );
+                );
         }
     )
 };

@@ -1,3 +1,4 @@
+// importing libraries
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
@@ -5,13 +6,9 @@ import axios from 'axios';
 
 
 function EditComplaint() {
-
     // The useParams hook returns an object of key/value pairs of
-    // the dynamic params from the current URL that were matched by
-    // the <Route path>.
+    // the dynamic params from the current URL that were matched by the <Route path>.
     let { id } = useParams();
-
-    console.log({ id })
 
     //sets and variables use to edit the trainer details
     const [ComplaintArray, SetComplaintArray] = useState([]);
@@ -22,7 +19,7 @@ function EditComplaint() {
     // navigate from react-router-dom to return us to a page the function is called
     const navigate = useNavigate();
 
-    //css
+    // styling
     const inputCss = {
         border: '2px solid blue',
         borderRadius: '20px',
@@ -41,15 +38,14 @@ function EditComplaint() {
     const EditComplaint = (e) => {
         e.preventDefault();
 
-        const trainerDetails = {
+        const ComplaintDetails = {
             title: title,
             POC: POC,
             status: status
         }
 
-        axios.put('http://localhost:4000/EditComplaint/' + id, trainerDetails)
+        axios.put('http://localhost:4000/EditComplaint/' + id, ComplaintDetails)
             .then((response) => {
-                console.log(response.data);
                 navigate('/readComplaint');
             });
     }
@@ -57,13 +53,12 @@ function EditComplaint() {
     useEffect(
         () => {
             const fetchData = async () => {
-                await axios.get('http://localhost:4000/complaint/' + id)//get the trainer passed in
+                await axios.get('http://localhost:4000/complaint/' + id)
                     .then((response) => {
                         SetComplaintArray(response.data);
-                        console.log(ComplaintArray);
                     })
                     .catch((error) => {
-                        console.log('EditComplaint.js' + error);
+                        console.log('EditComplaint.js based error : ' + error);
                     });
             }
             fetchData();
@@ -75,14 +70,14 @@ function EditComplaint() {
         <div style={{ display: 'flex', justifyContent: 'center' }}>
             <h1>Edit status of task</h1>
             {ComplaintArray ? (
-                <form onSubmit={EditComplaint} style={{ fontSize: '25px' }}>
+                <form onSubmit={EditComplaint} style={{ fontSize: '20px' }}>
                     <input placeholder={ComplaintArray.title} style={inputCss} onChange={(e) => setTitle(e.target.value)}></input><br></br>
                     <input placeholder={ComplaintArray.POC} style={inputCss} onChange={(e) => setPOC(e.target.value)}></input><br></br>
                     <input placeholder={ComplaintArray.status} style={inputCss} onChange={(e) => setStatus(e.target.value)}></input><br></br>
                     <input type="submit" value='confirm' style={submitCss}></input>
                 </form>
             ) : (
-                <p>loading</p>
+                <p>Somethings gone wrong :(</p>
             )}
         </div>
     );

@@ -1,9 +1,9 @@
+// importing libraries
 import { useState } from "react";
 import axios from "axios";
 
 // function for creating more complaints
 function CreateComplaint() {
-
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
     const [POC, setPOC] = useState('');
@@ -13,11 +13,7 @@ function CreateComplaint() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        console.log("Title: " + title +
-            " Cover: " + description +
-            " POC: " + POC);
-
-        const book = {
+        const complaint = {
             title: title,
             description: description,
             POC: POC,
@@ -25,14 +21,15 @@ function CreateComplaint() {
             lon: lon
         };
 
-        axios.post('http://localhost:4000/api/complaint', book)
+        // create complaint in database
+        axios.post('http://localhost:4000/api/complaint', complaint)
             .then(
+                // alert dialog so user knows that the create method ran without a hitch
                 alert('Your complaint has been uploaded! Thank you')
             )
             .catch();
-
     }
-    // some comment
+
     return (
         <div>
             <center>

@@ -1,7 +1,7 @@
+// import libraries
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Content from './components/content';
-import Footer from './components/footer';
 import Header from './components/header';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';

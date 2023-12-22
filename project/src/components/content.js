@@ -1,21 +1,17 @@
-
-
+// importing libraries
 import React from 'react';
-import potHoles from './potholes.PNG';
-import streetLights from './street-light.PNG';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-
+// importing images for front page
 import banner from './logobanner.jpg';
-
+import potHoles from './potholes.PNG';
+import streetLights from './street-light.PNG';
 
 export function Content() {
     return (
         <div>
-
             <Container fluid="md">
-
                 <Row>
                     <Col>
                         <br/><br/>

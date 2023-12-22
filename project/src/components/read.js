@@ -1,3 +1,4 @@
+// importing libraries
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Complaints from "./Complaints";
@@ -6,12 +7,9 @@ import Popup from 'reactjs-popup';
 
 // This is the function to view book items
 function Read() {
-
     const [data, setData] = useState([]);
-
     useEffect(
         () => {
-
             axios.get('http://localhost:4000/api/complaints')
                 .then(
                     (response) => {
@@ -23,7 +21,6 @@ function Read() {
                         console.log(error);
                     }
                 )
-
         }, []
     );
 
@@ -45,11 +42,10 @@ function Read() {
         <div>
             <h2>These are live issues & complaints from residents!</h2>
             <MDBRow className='w-100'>
-            <Complaints myBooks={data} ReloadData={Reload}></Complaints>
+                <Complaints myBooks={data} ReloadData={Reload}></Complaints>
             </MDBRow>
         </div>
     );
 
 }
-
 export default Read;
