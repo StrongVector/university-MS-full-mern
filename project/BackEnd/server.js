@@ -48,15 +48,15 @@ const complaintModel = mongoose.model('db', ComplaintSchema);
 // Delete call
 app.delete('/api/complaint/:id', async (req, res) => {
   console.log("Delete: " + req.params.id);
-  let book = await complaintModel.findByIdAndDelete(req.params.id) //find id and delete
-  res.send(book);
+  let complaint = await complaintModel.findByIdAndDelete(req.params.id) //find id and delete
+  res.send(complaint);
 })
 
 // put / update call
 app.put('/api/complaint/:id', async (req, res) => {
   console.log("Update: " + req.params.id);
-  let book = await complaintModel.findByIdAndUpdate(req.params.id, req.body, { new: true });
-  res.send(book);
+  let complaint = await complaintModel.findByIdAndUpdate(req.params.id, req.body, { new: true });
+  res.send(complaint);
 })
 
 // post / create call
@@ -104,7 +104,7 @@ app.get('/complaint/:id', async (req, res) => {
 app.put('/EditComplaint/:id', async (req, res) => {
   console.log("update:" + req.params.id);
   let complaint = await complaintModel.findByIdAndUpdate(req.params.id, req.body, { new: true });
-  res.send(complaint);//resend to book.js to change the mapping
+  res.send(complaint);//resend
 })
 
 app.listen(port, () => {

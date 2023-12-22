@@ -11,7 +11,7 @@ export function Complaints(props) {
     return props.myComplaints.map(
         (complaint) => {
             return (
-                <MDBCol className='{book._id}'>
+                <MDBCol className='{complaint._id}'>
                     {/* This is an iframe - I've concatinated the url from openstreetmap.org to present the lat and lon on a marker on the map */}
                     <iframe width="425" height="350" src={"http://www.openstreetmap.org/export/embed.html?bbox=" + complaint.lon + "%2C" + complaint.lat + "%2C" + complaint.lon + "%2C" + complaint.lat + "&marker=" + complaint.lat + "%2C" + complaint.lon + "&layers=ND"}></iframe>
                     <div>
