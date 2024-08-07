@@ -1,4 +1,4 @@
-![logobanner](https://github.com/calsickofthis/Data-Rep-Project-2023/assets/36414229/a64460b4-ddc4-4031-acb2-159c3e1b857d)
+
 # FixMyStreets.ie Wiki!
 Welcome to the wiki page for fixmystreets.ie.
 Below we have a video walkthrough of the project, screenshots of the pages on the website, and a writeup of the features you may not notice on the first note.
@@ -7,8 +7,6 @@ Below we have a video walkthrough of the project, screenshots of the pages on th
 I think the iframes I used in this app merit attention. They add a lot to the project. I'd originally considered using the npm library to create the Google Maps but found using simple HTML with a parsed URL made the application more lightweight and was easier to use.
 
 # Video Walkthrough of the website!
-https://www.loom.com/embed/1e31b43bb42142afb0797954ec350642?sid=28b028c1-ebb3-4a73-9362-8ffafebdce8d
-[![IMAGE ALT TEXT HERE](https://github.com/calsickofthis/Data-Rep-Project-2023/assets/36414229/52bba214-af24-460c-8fa8-814330c99762)](https://www.loom.com/embed/1e31b43bb42142afb0797954ec350642?sid=28b028c1-ebb3-4a73-9362-8ffafebdce8d)
 
 
 ## **What is FixMyStreets.ie??:**
@@ -32,11 +30,9 @@ npm start
 ## Pages
 
 ### HomePage
-<img width="960" alt="homepage" src="https://github.com/calsickofthis/Data-Rep-Project-2023/assets/36414229/74a27ed0-cfbe-465b-a722-dbbeefaeadb0">
 Nothing super interesting here I'm afraid - this is the homepage to describe what this website's purpose is. I wanted to add a nice banner too but couldn't get it working in time - also found it difficult to find images that would look well in fullscreen.
 
 ### Create Complaint Page
-<img width="959" alt="CreateComplaintPage" src="https://github.com/calsickofthis/Data-Rep-Project-2023/assets/36414229/c665015e-bd66-438b-bd86-4d40adfad7ce">
 This is the page where in theory members of the public would add complaints they have - they must have their coordinates - if I were to make adjustments to this website I'd like to use location services to track the location of the phone so the user doesn't have to input this data. I could've easily done this if I was sure the user was using a Chrome based browser but that isn't something I can be sure of and as this is a project that my grade depends on, I didn't want to risk it. I'd also like to add the ability to upload a photo or video.
 
 At the minute, the inputs are as follows :
@@ -57,7 +53,6 @@ Longitude => the longitude coordinates of the issue
 Your contact details => your phone number - this is added into a tel a link so it's important it's a phone number
 
 ### Live reports
-<img width="960" alt="live" src="https://github.com/calsickofthis/Data-Rep-Project-2023/assets/36414229/531d662a-5b78-4131-9dbf-c4f7016981c3">
 
 This is in theory the page where council workers would scroll through for tasks in the area to fix. at first glance, there is just task boxes with limited information available however.
 
